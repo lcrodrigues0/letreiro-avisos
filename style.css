@@ -10,31 +10,28 @@
 
 /* Overall styles */
 
-* {
+*{
     margin: 0;
     padding: 0;
     /* box-sizing: border-box; */
     font-size: 5vw;
     font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
 }
 
-body{
+.page-notice{
     width: 100vw;
     height: 100vh;
 
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-}
-
-.page-notice{
-    width: 100%;
-    height: 100%;
 }
 
 /* Header */
 .page-notice header{
     width: 100%;
+    height: 8.33%;
+
     background-color: #002876;
 
     display: flex;
@@ -42,7 +39,7 @@ body{
 }
 
 .page-notice .header__content{
-    padding: 0.18rem 0.2003rem;
+    padding: 0.2003rem;
 }
 
 .page-notice .header__content__time {
@@ -58,47 +55,74 @@ body{
 
 /* Board */
 .board {
-    width: 100%;
-    height: 95%;
-
     background-color: #e6ead8;
 
     display: flex;
     flex-direction: row;
-}
+    flex-grow: 1;
+
+    padding: 0.5em;
+} 
 
 .page-notice .board .left-board {
     background-color: #033863;
 
-    height: 90%;
     width: 30%;
-    border-radius: 2%;
+    height: 100%;
+    
+    border-radius: 10px;
 
-    margin: 1%;
-    margin-right: 0.5%;
+    margin-right: 1%; 
+    padding: 0.5%;
+}
+
+.page-notice .board .left-board ul {
+    border-radius: 10px;
 
     display: flex;
     flex-direction: column;
+    gap: 10px;
+
+    box-sizing: border-box;
 }
 
 .page-notice .board .left-board .message{
     background-color: #d8ecfc;
 
-    height: 20%;
-    margin: 5%;
+    height: 10%;
+    border-radius: 15px;
 
-    border-radius: 5%;
+    display: flex;
+    flex-direction: row;
+
+    padding: 1;
+}
+
+.page-notice .board .left-board .message img{
+    width: 30%;
+    height: 30%;
+    /* max-height: 100%; */
+}
+
+.page-notice .board .left-board .message h1{
+    /* width: 60%; */
+    /* max-height: 100%; */
+}
+
+.page-notice .board .left-board .message p{
+    width: 80%;
+    /* max-height: 100%; */
 }
 
 .page-notice .board .main-board {
     background-color: #b7d3fc;
 
-    height: 90%;
-    width: 100%;
-    border-radius: 2%;
+    flex-grow: 1;
 
-    margin: 1%;
-    margin-left: 0.5%;
+    display: flex;
+    border-radius: 20px;
+
+    flex-direction: column;
 }
 
 
