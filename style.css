@@ -19,6 +19,10 @@
     list-style-type: none;
 }
 
+body{
+    display: flex;
+}
+
 .page-notice{
     width: 100vw;
     height: 100vh;
@@ -30,7 +34,7 @@
 /* Header */
 .page-notice header{
     width: 100%;
-    height: 8.33%;
+    height: 5%;
 
     background-color: #002876;
 
@@ -57,6 +61,8 @@
 .board {
     background-color: #e6ead8;
 
+    height: 95%;
+
     display: flex;
     flex-direction: row;
     flex-grow: 1;
@@ -67,7 +73,7 @@
 .page-notice .board .left-board {
     background-color: #033863;
 
-    width: 30%;
+    width: 27%;
     height: 100%;
     
     border-radius: 10px;
@@ -83,7 +89,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.1em;
 
     box-sizing: border-box;
 }
@@ -91,7 +97,9 @@
 .page-notice .board .left-board .message{
     background-color: #d8ecfc;
 
-    height: 150px;
+    height: 20%;
+    max-height: 150px;
+
     border-radius: 15px;
 
     display: flex;
@@ -108,16 +116,16 @@
 }
 
 .page-notice .board .left-board .message .message_text{
-    width: 80%;    
+    width: 70%;    
     margin-left: 5%;
 }
 
 .page-notice .board .left-board .message .message_text h1{
-    font-size: 40px;
+    font-size: 50%;
 }
 
 .page-notice .board .left-board .message .message_text p{
-    font-size: 35px;
+    font-size: 40%;
 }
 
 .page-notice .board .main-board {
@@ -128,6 +136,27 @@
     border-radius: 20px;
 
     flex-direction: column;
+
+    padding: 2%;
+}
+
+.page-notice .board .main-board .image{
+    background-color: #e6ead8;
+
+    width: 20%; 
+    min-width: 150px;
+    aspect-ratio: 1 / 1; 
+
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.2), 1px 1px 5px 2px rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-notice .board .main-board .image img{
+    height: 90%; 
 }
 
 
