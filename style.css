@@ -61,7 +61,7 @@
     flex-direction: row;
     flex-grow: 1;
 
-    padding: 0.5em;
+    padding: 0.2em;
 } 
 
 .page-notice .board .left-board {
@@ -74,6 +74,8 @@
 
     margin-right: 1%; 
     padding: 0.5%;
+
+    box-sizing: border-box;
 }
 
 .page-notice .board .left-board ul {
@@ -89,36 +91,39 @@
 .page-notice .board .left-board .message{
     background-color: #d8ecfc;
 
-    height: 10%;
+    height: 150px;
     border-radius: 15px;
 
     display: flex;
     flex-direction: row;
+    align-items: center;
 
     padding: 1;
 }
 
 .page-notice .board .left-board .message img{
+    flex-grow: 1;
     width: 30%;
-    height: 30%;
-    /* max-height: 100%; */
+    margin-left: 2%;
 }
 
-.page-notice .board .left-board .message h1{
-    /* width: 60%; */
-    /* max-height: 100%; */
+.page-notice .board .left-board .message .message_text{
+    width: 80%;    
+    margin-left: 5%;
 }
 
-.page-notice .board .left-board .message p{
-    width: 80%;
-    /* max-height: 100%; */
+.page-notice .board .left-board .message .message_text h1{
+    font-size: 40px;
+}
+
+.page-notice .board .left-board .message .message_text p{
+    font-size: 35px;
 }
 
 .page-notice .board .main-board {
     background-color: #b7d3fc;
 
     flex-grow: 1;
-
     display: flex;
     border-radius: 20px;
 
