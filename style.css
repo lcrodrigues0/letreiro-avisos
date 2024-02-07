@@ -1,8 +1,104 @@
+/* Switch between pages*/
 .hidden{
     display: none;
 }
 
-#avisos{
+#notices{
     width: 1848px;
     height: 968px;
 }
+
+/* Overall styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-size: 5vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.page-notice{
+    width: 100%;
+    height: 100%;
+}
+
+/* Header */
+.page-notice header{
+    width: 100%;
+    background-color: #002876;
+
+    display: flex;
+    align-items: center;
+}
+
+.page-notice .header__content{
+    padding: 0.18rem 0.2003rem;
+}
+
+.page-notice .header__content__time {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.page-notice .header__content__time p{
+    color: white;
+    font-size: 0.5em;
+}
+
+/* Board */
+.board {
+    width: 100%;
+    height: 95%;
+
+    background-color: #e6ead8;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.page-notice .board .left-board {
+    background-color: #033863;
+
+    height: 90%;
+    width: 30%;
+    border-radius: 2%;
+
+    margin: 1%;
+    margin-right: 0.5%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.page-notice .board .left-board .message{
+    background-color: #d8ecfc;
+
+    height: 20%;
+    margin: 5%;
+
+    border-radius: 5%;
+}
+
+.page-notice .board .main-board {
+    background-color: #b7d3fc;
+
+    height: 90%;
+    width: 100%;
+    border-radius: 2%;
+
+    margin: 1%;
+    margin-left: 0.5%;
+}
+
+
