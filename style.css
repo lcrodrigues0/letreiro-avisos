@@ -67,7 +67,7 @@ body{
     flex-direction: row;
     flex-grow: 1;
 
-    padding: 0.2em;
+    padding: 1%;
 } 
 
 .page-notice .board .left-board {
@@ -106,7 +106,7 @@ body{
     flex-direction: row;
     align-items: center;
 
-    padding: 1;
+    padding: 1%;
 }
 
 .page-notice .board .left-board .message img{
@@ -117,15 +117,29 @@ body{
 
 .page-notice .board .left-board .message .message_text{
     width: 70%;    
-    margin-left: 5%;
 }
 
 .page-notice .board .left-board .message .message_text h1{
-    font-size: 50%;
+    font-size: 0.4em;
+
+    white-space: nowrap; /* Impede quebra de linha */
+    overflow: hidden; /* Esconde o conteúdo que excede o tamanho do contêiner */
+    text-overflow: ellipsis; /* Adiciona reticências (...) */
+
+    margin-left: 5%;
+    margin-bottom: 2%;
 }
 
+
 .page-notice .board .left-board .message .message_text p{
-    font-size: 40%;
+    font-size: 0.3em;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2; /* Defina o número máximo de linhas que deseja exibir */
+
+    margin-left: 3%;
 }
 
 .page-notice .board .main-board {
@@ -135,9 +149,16 @@ body{
     display: flex;
     border-radius: 20px;
 
+    box-sizing: border-box;
     flex-direction: column;
 
     padding: 2%;
+}
+.page-notice .board .main-board .main-board__content__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 .page-notice .board .main-board .image{
@@ -153,10 +174,33 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    margin: 1% 1% 0 0;
 }
 
 .page-notice .board .main-board .image img{
     height: 90%; 
+}
+
+.page-notice .board .main-board .main-board__content__header .text {
+    flex-grow: 1;
+}
+
+.page-notice .board .main-board .main-board__content__header .teacher {
+    background-color: #ccdffc;
+
+    max-width: 95%;
+
+    margin-left: 1%;
+    padding: 2%;
+}
+
+.page-notice .board .main-board .main-board__content__header .text h2{
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    
+    font-size: 0.5em;
 }
 
 
