@@ -1,0 +1,107 @@
+/* Switch between pages*/
+.hidden{
+    display: none;
+}
+
+/* #notices{
+    width: 1848px;
+    height: 968px;
+} */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vw;
+}
+
+/* Body */
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Page */
+.page-notice {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 8.33%;
+    background-color: #002876;
+    padding: 0 0.2083em;
+
+    display: flex;
+    align-items: center;
+}
+
+header .header__content .header__content__time p{
+    color: #fff;
+    font-size: 0.5em;
+}
+
+/* Board */
+.board{
+    background-color: #e6ead8;
+    flex-grow: 1;
+
+    display: flex;
+    padding: 0.7% 1%;
+}
+
+.board .left-board {
+    background-color: #033863;
+    list-style-type: none;
+
+    width: 25%;
+    height: 100%;
+
+    border-radius: 10px;
+    padding: 0.3vw;
+}
+
+.board .left-board .message{
+    background-color: #d8ecfc;
+    margin: 2%;
+    height: 8vmax;
+
+    border-radius: 10px;
+    padding: 1%;
+
+    display: flex;
+}
+
+.board .left-board .message img{
+    height: 100%;
+}
+
+.board .left-board .message .text{
+    flex-grow: 1;
+}
+
+
+.board .left-board .message h1{
+    font-size: 0.4em;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.board .main-board {
+    background-color: #b7d3fc;
+    flex-grow: 1;
+
+    border-radius: 20px;
+    margin-left: 1vw;
+}
+
