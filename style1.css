@@ -84,15 +84,27 @@ header .header__content .header__content__time p{
     height: 100%;
 }
 
-.board .left-board .message .text{
-    flex-grow: 1;
+.board .left-board .message .message_text{
+    max-width: 65%;
 }
 
 
 .board .left-board .message h1{
-    font-size: 0.4em;
+    font-size: 0.35em;
 
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    margin: 3%;
+}
+
+.board .left-board .message p {
+    font-size: 0.3em;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -103,5 +115,42 @@ header .header__content .header__content__time p{
 
     border-radius: 20px;
     margin-left: 1vw;
+
+    padding: 2% 1.5%;
 }
 
+.board .main-board .main-board__content__header{
+    height: 25%;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: blue; 
+    overflow: hidden;
+
+}
+
+.board .main-board .main-board__content__header .image{
+    width: fit-content;
+    height: fit-content;
+    background-color: #d9d9d9;
+
+    border-radius: 15px;
+}
+
+.board .main-board .main-board__content__header .image img{
+    height: 15vmax;
+}
+
+.board .main-board .main-board__content__header .text{
+    flex-grow: 1;
+
+    background-color: pink;
+}
+
+.board .main-board .main-board__content__header .text .teacher{
+    height: 50%;
+    max-height: 40%;
+
+    background-color: red;
+}
