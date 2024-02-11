@@ -123,6 +123,8 @@ header .header__content .header__content__time p{
     /* background-color: blue;  */
     overflow: hidden;
 
+    position: relative;
+
 }
 
 .board .main-board .main-board__content__header .image{
@@ -198,6 +200,11 @@ header .header__content .header__content__time p{
     padding: .3%;
     border-radius: 5px;
 
+    position: absolute;
+    left: 82%;
+    right: 3%;
+    bottom: 3%;
+    
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
  }
  
