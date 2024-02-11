@@ -16,14 +16,19 @@
     <link rel="stylesheet" href="./css/avisos.css">
     <link rel="stylesheet" href="./css/status.css">
 
+    <link rel="stylesheet" href="./css/avisos/switch-pages.css">
+
+
     <script type="module" src="./js/app.js" defer></script>
     <script type="module" src="./js/avisos.js"></script>
     <script type="module" src="./js/status.js" defer></script>
+    <script type="module" src="./js/avisos/script.js"></script>
+
 </head>
 
 <body>
 
-    <div class="page">
+    <div class="page-horarios" id="horarios">
         <header id="cabeçalho">
             <div class="conteudo-cabeçalho">
                 <div class="div-tempo">
@@ -116,9 +121,10 @@
                     <!-- Preenchido por JS -->
                 </div>
             </div>
+        </div>
     </div>
 
-    <div class="page-notice" id="notices">
+    <div class="page-notice hidden" id="notices">
         <header>
             <div class="header__content">
                 <div class="header__content__time">
@@ -185,6 +191,5 @@
         </div>
     </div>
 </body>
-
 
 </html>

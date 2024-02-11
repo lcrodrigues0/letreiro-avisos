@@ -5,11 +5,11 @@ const avisosPage = document.querySelector("#notices");
 
 setInterval(() => {
     if (active == 'horarios'){
-        horariosPage.className = "page"
+        horariosPage.className = "page-horarios"
         avisosPage.className += " hidden";
         active = 'avisos';
     } else {
-        avisosPage.className = "page"
+        avisosPage.className = "page-notice"
         horariosPage.className += " hidden";
         active = 'horarios';
     }

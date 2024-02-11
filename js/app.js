@@ -6,12 +6,12 @@ import { Rodape } from "./rodape.js"
 // Rodape.inicializaRodape(temAviso)
 
 
-        function getAulasDia() {
-            let request = new XMLHttpRequest();
-            request.open("GET", "aulasDia", false);
-            request.send(null);
-            return JSON.parse(request.responseText);
-        }
+function getAulasDia() {
+    let request = new XMLHttpRequest();
+    request.open("GET", "aulasDia", false);
+    request.send(null);
+    return JSON.parse(request.responseText);
+}
 
 function trocaNome() {
     getAulasDia().forEach(idx =>
