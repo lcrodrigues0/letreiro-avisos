@@ -6,12 +6,116 @@
     <title>Letreiro-Avisos</title>
 	<link rel="shortcut icon" href="#" />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/avisos/style.css">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/horarios.css">
+    <link rel="stylesheet" href="./css/rodape.css">
+    <link rel="stylesheet" href="./css/cabecalho.css">
+    <link rel="stylesheet" href="./css/avisos.css">
+    <link rel="stylesheet" href="./css/status.css">
+
+    <script type="module" src="./js/app.js" defer></script>
+    <script type="module" src="./js/avisos.js"></script>
+    <script type="module" src="./js/status.js" defer></script>
 </head>
 
 <body>
+
     <div class="page">
-       <img src="./imgs/tela-horarios.png" alt="" id="horarios" class="page hidden">
+        <header id="cabeçalho">
+            <div class="conteudo-cabeçalho">
+                <div class="div-tempo">
+                    <p id="tempo">aqui vai o horario</p>
+                </div>
+                <div class="notificacao">
+                    <span id="ha-aviso">Não há avisos</span>
+                </div>
+            </div>
+        </header>
+        <div tela1 class="tela">
+            <div lab1 class="quadro">
+                
+                <div class = "status">
+                    <div class = "lab-temperatura"> 
+                        <div id= "lab1" class = "qual-lab">
+                            Lab 1
+                        </div> 
+                        <div class = "temperatura">
+                            <img src="./img/left-long-solid.svg" alt="" class="setas"/>
+                        </div>
+    
+                        <div class = "status-pcs">
+                            <div class = "pc-emoji">
+                                <img src="./img/pcImg.png" alt="imagem de um pc">
+                            </div>
+                            <div class = "pcs-disponiveis">
+                                43
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="container_horarios">
+                    <!-- Preenchido por JS -->
+                </div>
+            </div>
+            <div lab2 class="quadro">
+                
+                <div class = "status">
+                    <div class = "lab-temperatura">
+                        <div id= "lab2" class = "qual-lab">
+                            Lab 2
+                        </div> 
+                        <div class = "temperatura">
+                            <img src="./img/right-long-solid.svg" alt="" class="setas"/>
+                        </div>
+    
+                        <div class = "status-pcs">
+                            <div class = "pc-emoji">
+                                <img src="./img/pcImg.png" alt="imagem de um pc">
+                            </div>
+                            <div class = "pcs-disponiveis">
+                                25
+                            </div>
+                        </div>
+    
+                    </div> 
+                </div>
+    
+                <div class="container_horarios">
+                    <!-- Preenchido por JS -->
+                </div>
+            </div>
+            <div lab3 class="quadro">
+                
+                <div class = "status">
+                    <div class = "lab-temperatura">
+                        <div id= "lab3" class = "qual-lab">
+                            Lab 3
+                        </div>
+                        
+                        <div class = "temperatura">
+                            <img src="./img/up-long-solid.svg" alt="" class="setas seta-para-cima"/>
+                        </div> 
+                        <div class = "status-pcs">
+                            <div class = "pc-emoji">
+                                <img src="./img/pcImg.png" alt="imagem de um pc">
+                            </div>
+                            <div class = "pcs-disponiveis">
+                                30
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="container_horarios">
+                    <!-- Preenchido por JS -->
+                </div>
+            </div>
     </div>
 
     <div class="page-notice" id="notices">
@@ -27,28 +131,28 @@
             <div class="left-board">
                <ul class="left-board__content">
                     <li class="message">
-                        <img src="./imgs/info-icon.png" alt="information icon">
+                        <img src="./img/avisos/info-icon.png" alt="information icon">
                         <span class="message_text">
                             <h1>(Professor) Lorem ipsum dolor sit, amet</h1>
                             <p>(Assunto) Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem voluptas facere ut quisquam vero doloribus, nostrum, quam recusandae officiis rerum odit iusto vitae! Veniam harum, mollitia sit aperiam nulla alias?</p>
                         </span>
                     </li>
                     <li class="message">
-                        <img src="./imgs/event-icon.png" alt="event icon">
+                        <img src="./img/avisos/event-icon.png" alt="event icon">
                         <span class="message_text">
                             <h1>(Professor) Lorem ipsum dolor sit, amet</h1>
                             <p>(Assunto) Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus molestias esse accusantium itaque dicta officia doloribus repellat cum soluta saepe fugiat vero ratione nihil, nam in corporis necessitatibus doloremque delectus.</p>
                         </span> 
                     </li>
                     <li class="message">
-                        <img src="./imgs/notice-icon.png" alt="notice icon">
+                        <img src="./img/avisos/notice-icon.png" alt="notice icon">
                         <span class="message_text">
                             <h1>(Professor) Lorem ipsum dolor sit, amet</h1>
                             <p>(Assunto) Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab molestiae eum esse quia vero. Mollitia dolorum consequatur fugiat repellendus error modi, asperiores odit fuga qui tenetur. Natus laboriosam fuga perspiciatis.</p>
                         </span>
                     </li>
                     <li class="message">
-                        <img src="./imgs/info-icon.png" alt="information icon">
+                        <img src="./img/avisos/info-icon.png" alt="information icon">
                         <span class="message_text">
                             <h1>(Professor) Lorem ipsum dolor sit, amet</h1>
                             <p>(Assunto) Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sint perferendis ipsum, eos iste necessitatibus eligendi fugit incidunt dignissimos nisi illo? Consequuntur voluptatem itaque odit qui repellat, non quo sunt.</p>
@@ -61,7 +165,7 @@
             <div class="main-board__content">
                     <div class="main-board__content__header">
                         <div class="image">
-                            <img src="./imgs/notice-icon.svg" alt="notice icon">
+                            <img src="./img/avisos/notice-icon.svg" alt="notice icon">
                         </div>
                         <div class="text">
                             <div class="teacher">
@@ -79,12 +183,8 @@
                 </div>
             </div>
         </div>
-        
-
-        <!-- <img src="./imgs/tela-avisos2.png" alt="" class="page"> -->
     </div>
 </body>
 
-<script src="./script.js"></script>
 
 </html>

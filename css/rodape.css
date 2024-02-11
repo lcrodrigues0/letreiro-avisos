@@ -1,0 +1,51 @@
+#rodape{
+    width: 100%;      /* 1920px */
+    height: 8.33%;       /* 90px */
+    display: flex;  
+    justify-content: center;
+    background-color: #002876;
+    
+}
+
+#rodape .conteudo-rodape{
+    width: 60%;      /* 1152px */
+    height: 100%;       /* 90px */
+
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+#rodape .pages{
+    width: 12.59%;      /* 145px */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rodape .maos{
+    width: 6.51%;        /* 75px */
+    height: 83.33%;       /* 75px */
+    margin: 0.0417em 0;
+    border-radius: 50%;
+    background-color: #D2ECFF;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;        
+}
+
+#rodape .imagens-maos{ 
+    width: 60%;     /* 45px */
+}
+
+#rodape .pages{
+    
+    border-radius: 20px;
+    box-shadow: inset 0px 5px 4px rgba(0, 0, 0, 0.5);
+    
+    width: 13%;        /* 145px */
+    height: 49%;
+}

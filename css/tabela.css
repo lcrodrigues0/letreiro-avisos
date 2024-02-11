@@ -1,0 +1,86 @@
+:root {
+    --border-color: #083c64;
+    --bg-color: #d8ecfc;
+    --active-color: #ffcc64;
+    --outer-border: 8px solid var(--border-color);
+    --thick-border: 3px solid var(--border-color);
+    --thin-border: 2px solid var(--border-color);
+    --radius: 10px;
+}
+
+.time-table {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    font-family: sans-serif;
+    table-layout: fixed;
+    border: var(--outer-border);
+    border-collapse: separate;
+    border-radius: var(--radius);
+    border-spacing: 0px;
+}
+
+.time-table thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-collapse: separate;
+}
+
+.time-table th {
+    font-size: 0.34em;
+}
+
+.time-table tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.time-table td {
+    border-top: var(--thick-border);
+    vertical-align: top;
+    font-size: 0.2em !important;
+}
+
+.time-table th,
+.time-table td {
+    height: 7.4%;
+    max-width: 	16.6%; /* 100% / (1 + qtdDias) */
+    padding-left: 15;
+    padding-right: 15;
+    border-left: var(--thin-border);
+    word-break: break-word;
+    text-align: center;
+    overflow: hidden;
+}
+
+.time-table th:first-child {
+    font-size: 0.32em;
+    border-left: 0;
+}
+
+.time-table tr:last-child td:first-child {
+    border-left: 0;
+}
+
+.time-table td:first-child {
+    font-size: 0.4em !important;
+    border-left: 0;
+    vertical-align: middle;
+}
+
+.time-table thead:first-child tr:first-child th:first-child, 
+.time-table tbody:first-child tr:first-child td:first-child {
+    border-radius: var(--radius) 0 0 0;
+}
+
+.time-table thead:last-child tr:last-child th:first-child, 
+.time-table tbody:last-child tr:last-child td:first-child {
+    border-radius: 0 0 0 var(--radius);
+}
+
+.time-table .reserved {
+    background-color: var(--active-color);
+}
+

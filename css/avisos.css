@@ -1,0 +1,48 @@
+#avisos{
+    width: 64.95%;      /* 1247px */
+    height: 95.56%;      /* 860px */
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    background-color:#033863;
+    border-radius: 20px;
+
+    
+    overflow: hidden;
+}
+
+#avisos .aviso{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 98%;
+    height: 47%;
+    padding: 0.2em;
+
+    background: linear-gradient(96.27deg, #FFFFFF 15.49%, rgba(255, 255, 255, 0.78) 78.18%, rgba(255, 255, 255, 0.58) 100%);
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+}
+
+#avisos .nome{
+    font-size: 0.5em;       /* 48px */
+}
+
+#avisos .texto-aviso{
+    font-size: 0.4167em;        /* 40px */
+    padding: 0 0.625em;     /* 0 20px */
+    height: 50%;
+}
+
+#avisos .horario{
+    font-size: 0.4167em;        /* 40px */
+    color: #8E8E8E;    
+}
+
+#ha-aviso {
+    font-size: 0.4em !important;
+}

@@ -1,0 +1,66 @@
+.page {
+    width: 100vw;      /* 1920px */
+    height: 100vh;     /* 1080px */
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+.tela {
+    width: 100%;      /* 1920px */
+/*    height: 83.33%;      /* 900px */
+    height: 95%;      /* 900px */
+    background-color: #E6EAD8;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    visibility: visible;
+    opacity : 1;
+    transition : visibility 0s, opacity 1s linear;
+}
+
+.tela .quadro {
+    width: 31.93%;       /*613px*/
+    height: 95.56%;      /*860px*/
+/*    height: 100%;      /*860px*/
+    background-color: #033863;
+    border-radius: 10px;
+    margin: 0 0.1094em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    row-gap: 1%;
+
+    overflow: hidden;
+}
+
+[tela1] {
+    overflow-x: hidden;
+    justify-content: flex-start;
+    padding: 0 0.1094em;
+}
+
+[tela1] .quadro {
+    min-width: 6.3854em;
+}
+
+.tela #calendario {
+    width: 64.95%;      /* 1247px */
+    height: 95.56%;      /* 860px */
+/*    height: 100%;      /* 860px */
+
+    /* border: 1px solid red; */
+}
+
+.display_none{
+    max-height: 0;
+    visibility: hidden;
+    opacity : 0;
+}
