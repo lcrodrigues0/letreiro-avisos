@@ -131,7 +131,6 @@ header .header__content .header__content__time p{
     flex-direction: row;
 
     /* background-color: blue;  */
-    /* overflow: hidden; */
 }
 
 .board .main-board .main-board__content__header .image{
@@ -191,7 +190,7 @@ header .header__content .header__content__time p{
 }
 
 .board .main-board .main-board__content__header .text .subject{
-    margin: 1% 0 0 5%;
+    margin: 2% 0 0 5%;
     font-size: 0.6em;
     font-weight: 700;
 }
