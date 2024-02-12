@@ -1,0 +1,40 @@
+[
+    {
+      "id": 1,
+      "type": 1,
+      "sender": "Prof. Vitor Estevão",
+      "title": "Aula de EngSoft 2 Cancelada",
+      "content": "Prezados(as) estou tendo uma reunião de emergência junto ao coordenador do curso.",
+      "duration": 10,
+      "timestamp": "abc"
+
+    },
+    {
+      "id": 2,
+      "type": 3,
+      "sender": "Prof. Ciclano",
+      "title": "Início do CT de portas abertas",
+      "content": "Texto do aviso 2",
+      "duration": 7,
+      "timestamp": "abc"
+    },
+    {
+      "id": 3,
+      "type": 2,
+      "sender": "Prof. Beltrano",
+      "title": "Aberto Edital PaEPE 2024/1",
+      "content": "Texto do aviso 3",
+      "duration": 5,
+      "timestamp": "abc"
+      
+    },
+    {
+      "id": 4,
+      "type": 4,
+      "sender": "Prof. Ciclano",
+      "title": "Título do aviso 4",
+      "content": "Texto do aviso 4",
+      "duration": 5,
+      "timestamp": "abc"
+    }
+]
