@@ -177,7 +177,7 @@ header .header__content .header__content__time p{
     display: flex;
     align-items: center;
 
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
 }
 
 .board .main-board .main-board__content__header .text .teacher h1{
