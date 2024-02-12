@@ -20,10 +20,11 @@ const avisosPage = document.querySelector("#notices");
 let count = 0;
 
 setInterval(() => {
-    console.log('aviso: ' + Date.now().toString());
-    const info = noticeList[count%noticeList.length];
+    console.log('aviso: ' + Date.now().toString()); //Apenas para debug
+
+    const info = noticeList[count];
     loadInfos(info);
-    count++;
+    count = (count + 1)%noticeList.length;
 
     avisosPage.className = "page-notice";
     horariosPage.className += " hidden";
@@ -35,7 +36,8 @@ setInterval(() => {
     Troca da página de avisos para paǵina de horários 
 */
 function switchPage(){
-    console.log('horarios: ' + Date.now().toString());
+    console.log('horarios: ' + Date.now().toString()); //Apenas para debug
+
     horariosPage.className = "page-horarios"
     avisosPage.className += " hidden";
 }
