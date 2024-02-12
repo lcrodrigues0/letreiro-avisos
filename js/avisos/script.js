@@ -14,29 +14,35 @@ console.log(noticeList)
 
 
 // Switch pages
-let active = 'horarios';
-
 const horariosPage = document.querySelector("#horarios");
 const avisosPage = document.querySelector("#notices");
 
 let count = 0;
 
 setInterval(() => {
-    if (active == 'horarios'){
-        horariosPage.className = "page-horarios"
-        avisosPage.className += " hidden";
-        active = 'avisos';
-    } else {
-        const info = noticeList[count%noticeList.length];
-        loadInfos(info);
-        count++;
+    console.log('aviso: ' + Date.now().toString());
+    const info = noticeList[count%noticeList.length];
+    loadInfos(info);
+    count++;
 
-        avisosPage.className = "page-notice"
-        horariosPage.className += " hidden";
-        active = 'horarios';
-    }
-}, 600);
+    avisosPage.className = "page-notice";
+    horariosPage.className += " hidden";
 
+    setTimeout(switchPage, info.duration*1000);
+}, 40000); // Intervalo de tempo definido para page horários de 40s, no max.
+
+/*
+    Troca da página de avisos para paǵina de horários 
+*/
+function switchPage(){
+    console.log('horarios: ' + Date.now().toString());
+    horariosPage.className = "page-horarios"
+    avisosPage.className += " hidden";
+}
+
+/*
+    Carrega informações na página de avisos
+*/
 function loadInfos(info){
     const elMainBoard = document.querySelector('.main-board');
     const elMainImg = document.querySelector("#main-image");
