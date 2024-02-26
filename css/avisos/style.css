@@ -139,7 +139,6 @@ header .header__content .header__content__time p{
     width: 15vmax;
     min-width: 15vmax;
     height: 15vmax;
-    background-color: #d9d9d9;
 
     display: flex;
     align-items: center;
@@ -170,7 +169,6 @@ header .header__content .header__content__time p{
 }
 
 .board .main-board .main-board__content__header .text .teacher{
-    background-color: #ccdffc;
     margin: 2% 1.5% 0 2%;
     border-radius: 10px;
 
@@ -227,7 +225,6 @@ header .header__content .header__content__time p{
  }
 
 .board .main-board .main-board__content .post-time p{
-    background-color: #ccdffc;
     font-size: 0.4em;
     padding: .3%;
     border-radius: 5px;
@@ -238,4 +235,57 @@ header .header__content .header__content__time p{
     
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
  }
+
  
+/* Style for warning notice */
+.board .warning {
+    background-color: #faee89;
+}
+.warning #main-image {
+    background-color: url("./img/avisos/notice-icon.png");
+}
+.warning .image {
+    background-color: #fce157;
+}
+.warning .teacher {
+    background-color: #fff7ab;
+}
+.warning #post-timestamp {
+    background-color: #fff7ab;
+}
+
+
+/* Style for information notice */
+.board .information {
+    background-color: #96ade8;
+}
+.information #main-image {
+    background-color: url('.img/avisos/info');
+}
+.information .image {
+    background-color: #6f8fe1;
+}
+.information .teacher {
+    background-color: #bbccf6;
+}
+.information #post-timestamp {
+    background-color: #bbccf6;
+}
+
+/* Style for event notice */
+.board .event {
+    background-color: #c686f9;
+}
+.event #main-image {
+    background-color: url("./img/avisos/event-icon.png");
+}
+.event .image {
+    background-color: #a66ed2;
+}
+.event .teacher, #post-timestamp {
+    background-color: #d5adf5;
+}
+
+.event #post-timestamp {
+    background-color: #d5adf5;
+}

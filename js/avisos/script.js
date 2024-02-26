@@ -29,8 +29,8 @@ setInterval(() => {
     avisosPage.className = "page-notice";
     horariosPage.className += " hidden";
 
-    setTimeout(switchPage, noticesShown[0].duration*100);
-}, 4000); // Intervalo de tempo definido para page horários de 40s, no max.
+    // setTimeout(switchPage, noticesShown[0].duration*100);
+}, 1000); // Intervalo de tempo definido para page horários de 40s, no max.
 
 function getNextFiveNotices(count) {
     let fiveNotices = [];
@@ -61,69 +61,36 @@ function loadInfos(notices){
 
     const sidebarNotices = notices.slice(1);
     loadSidebarNotices(sidebarNotices);
-    
-    
-    
-    // const elMainBoard = document.querySelector('.main-board');
-    // const elMainImg = document.querySelector("#main-image");
-    // const elDivImg = document.querySelector(".image");
-    // const elDivSender = document.querySelector(".teacher");
-    // const elSender = document.querySelector("#sender");
-    // const elTitle = document.querySelector('#subject-h2');
-    // const elContent = document.querySelector('#text-notice-p')
-    // const elTimestamp = document.querySelector('#post-timestamp');
-
-    // let mainImgSrc;
-    // let mainBkColor;
-    // let imgBkColor;
-    // let secColor;
-
-    // if (info.type == 1){
-    //     mainImgSrc = './img/avisos/notice-icon.png';
-    //     mainBkColor = '#faee89';
-    //     imgBkColor = '#fce157';
-    //     secColor = '#fff7ab';
-    // }
-    // else if (info.type == 2){
-    //     mainImgSrc = './img/avisos/info-icon.png';
-    //     mainBkColor = '#96ade8';
-    //     imgBkColor = '#6f8fe1';
-    //     secColor = '#bbccf6';
-    // }
-    // else if (info.type == 3){
-    //     mainImgSrc = './img/avisos/event-icon.png';
-    //     mainBkColor = '#c686f9';
-    //     imgBkColor = '#a66ed2';
-    //     secColor = '#d5adf5';
-    // } else {
-    //     mainImgSrc = './img/avisos/notice-icon.png';
-    //     mainBkColor = '#b7d3fc';
-    //     imgBkColor = '#d9d9d9';
-    //     secColor = '#ccdffc';
-    // }
-
-    // elMainImg.setAttribute('src', mainImgSrc );
-    // elMainBoard.style.background = mainBkColor;
-    // elDivImg.style.background = imgBkColor;
-    // elDivSender.style.background = secColor;
-    // elSender.textContent = info.sender;
-    // elTitle.textContent = info.title;
-    // elContent.textContent = info.content;
-    // elTimestamp.style.background = secColor;
-    // elTimestamp.textContent = info.timestamp;
 }
 
 // Load main notice
 function loadFirstNotice(firstNotice) {
-    document.querySelector("#sender").textContent = firstNotice.sender;
+    let noticeType;
+    if (firstNotice.type == 1) {
+        noticeType = 'warning'
+    } else if(firstNotice.type == 2) {
+        noticeType = 'information'
+    } else if(firstNotice.type == 3) {
+        noticeType = 'event'
+    }
+    
+    // Modifies the entire main-board according to the type
+    let elMainBoard = document.querySelector('.main-board');
+    elMainBoard.classList.remove('warning');
+    elMainBoard.classList.remove('information');
+    elMainBoard.classList.remove('event');
+    elMainBoard.classList.add(noticeType);
+
+    // Load main-notice fields with the firstNotice atributes
+    document.querySelector('#sender').textContent = firstNotice.sender;
     document.querySelector('#subject-h2').textContent = firstNotice.title;
     document.querySelector('#text-notice-p').textContent = firstNotice.content;
     document.querySelector('#post-timestamp').textContent = firstNotice.timestamp;
 }
 
-// Load sidebar with four notices
+// Load left-board with four notices
 function loadSidebarNotices(sidebarNotices) {
-    // Get the 'ul' element on the sidebar
+    // Get the 'ul' element on the left-board
     const elNoticesList = document.querySelector('.left-board__content');
 
     // Clean the content inside this 'ul' element
@@ -148,7 +115,6 @@ function loadSidebarNotices(sidebarNotices) {
         elNoticeSpan.classList = "message_text";
     })
 }
-
 
 ///// HEADER ///////
 // Update header date and time

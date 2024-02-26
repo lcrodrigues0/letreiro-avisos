@@ -1,12 +1,12 @@
 [
     {
       "id": 1,
-      "type": 1,
+      "type": 2,
       "sender": "Prof. A",
       "title": "Aula de EngSoft 2 Cancelada",
       "content": "Prezados(as) estou tendo uma reunião de emergência junto ao coordenador do curso.",
       "duration": 10,
-      "timestamp": "abc"
+      "timestamp": "ab"
 
     },
     {
@@ -25,12 +25,12 @@
       "title": "Aberto Edital PaEPE 2024/1",
       "content": "Texto do aviso 3",
       "duration": 10,
-      "timestamp": "abc"
+      "timestamp": "abcd"
       
     },
     {
       "id": 4,
-      "type": 4,
+      "type": 3,
       "sender": "Prof. D",
       "title": "Título do aviso 4",
       "content": "Texto do aviso 4",
@@ -68,7 +68,7 @@
     },
     {
       "id": 8,
-      "type": 4,
+      "type": 3,
       "sender": "Prof. H",
       "title": "Título do aviso 4",
       "content": "Texto do aviso 4",
