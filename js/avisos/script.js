@@ -63,15 +63,20 @@ function loadInfos(notices){
     loadSidebarNotices(sidebarNotices);
 }
 
+
+//// DEBUG: Retirar setAtribute('src', ...) # Muito feio
 // Load main notice
 function loadFirstNotice(firstNotice) {
     let noticeType;
     if (firstNotice.type == 1) {
         noticeType = 'warning'
+        document.querySelector('#main-image').setAttribute('src', "./img/avisos/notice-icon.png")
     } else if(firstNotice.type == 2) {
         noticeType = 'information'
+        document.querySelector('#main-image').setAttribute('src', "./img/avisos/info-icon.png")
     } else if(firstNotice.type == 3) {
         noticeType = 'event'
+        document.querySelector('#main-image').setAttribute('src', "./img/avisos/event-icon.png")
     }
     
     // Modifies the entire main-board according to the type
@@ -103,7 +108,17 @@ function loadSidebarNotices(sidebarNotices) {
         const elNoticeSpan = document.createElement('span');
         const elNoticeTitle = document.createElement('p');
 
-        elNoticeImg.setAttribute('src', "./img/avisos/info-icon.png");
+        console.log(notice.type);
+        if (notice.type == 1) {
+            elNoticeImg.setAttribute('src', "./img/avisos/notice-icon.png")
+            elNotice.classList.add("message-warning");
+        } else if (notice.type == 2) {
+            elNoticeImg.setAttribute('src', "./img/avisos/info-icon.png")
+            elNotice.classList.add("message-information");
+        } else {
+            elNoticeImg.setAttribute('src', "./img/avisos/event-icon.png")
+            elNotice.classList.add("message-event");
+        }
         elNoticeTitle.textContent = notice.title;
 
         elNoticeSpan.appendChild(elNoticeTitle);
@@ -111,7 +126,7 @@ function loadSidebarNotices(sidebarNotices) {
         elNotice.appendChild(elNoticeSpan);
         elNoticesList.appendChild(elNotice);
 
-        elNotice.classList = "message";
+        elNotice.classList.add("message");
         elNoticeSpan.classList = "message_text";
     })
 }

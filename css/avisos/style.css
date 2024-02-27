@@ -60,7 +60,6 @@ header .header__content .header__content__time p{
 }
 
 .board .left-board .message{
-    background-color: #d8ecfc;
     margin: 2%;
     height: 8vmax;
 
@@ -75,7 +74,6 @@ header .header__content .header__content__time p{
 .board .left-board .message img{
     width: 8vw;
     height: 7.5vw;
-
 }
 
 .board .left-board .message .message_text{
@@ -236,14 +234,30 @@ header .header__content .header__content__time p{
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
  }
 
+/* Style for left warning notice */
+.message-warning {
+    background-color: #fff7ab;
+}
+
+/* Style for left-board information notice */
+.message-information {
+    background-color: #bbccf6;
+}
+
+/* Style for left-board event notice */
+.message-event {
+    background-color: #d5adf5;
+}
+
  
-/* Style for warning notice */
+/* Style for main warning notice */
 .board .warning {
     background-color: #faee89;
 }
-.warning #main-image {
+/* Arrumar */
+/* .warning #main-image {
     background-color: url("./img/avisos/notice-icon.png");
-}
+} */
 .warning .image {
     background-color: #fce157;
 }
@@ -255,13 +269,14 @@ header .header__content .header__content__time p{
 }
 
 
-/* Style for information notice */
+/* Style for main information notice */
 .board .information {
     background-color: #96ade8;
 }
-.information #main-image {
+/* Arrumar */
+/* .information #main-image {
     background-color: url('.img/avisos/info');
-}
+} */
 .information .image {
     background-color: #6f8fe1;
 }
@@ -272,13 +287,14 @@ header .header__content .header__content__time p{
     background-color: #bbccf6;
 }
 
-/* Style for event notice */
+/* Style for main event notice */
 .board .event {
     background-color: #c686f9;
 }
-.event #main-image {
+/* Arrumar */
+/* .event #main-image {
     background-color: url("./img/avisos/event-icon.png");
-}
+} */
 .event .image {
     background-color: #a66ed2;
 }
