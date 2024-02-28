@@ -1,5 +1,6 @@
 export class Notice {
-    constructor(type, sender, title, content, duration, timestamp) {
+    constructor(id, type, sender, title, content, duration, timestamp) {
+        this.id = id;
         this.type = type;
         this.sender = sender;
         this.title = title;

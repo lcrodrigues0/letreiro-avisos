@@ -1,30 +1,36 @@
-import { Notice } from "./notice.js"
+import { NoticeList } from './noticeList.js';
 
+const URL_API = './avisosDia.json';
+
+////// FETCHING DATA //////
 // Fetch JSON archive
-const response = await fetch('./avisosDia.json');
-const infos = await response.json();
-console.log(infos)
-
-let noticeList = [];
-for (const info of infos){
-    const notice = new Notice(info.type, info.sender, info.title, info.content, info.duration, info.timestamp);
-    noticeList.push(notice)
+async function fetchJsonNotices(jsonNotices) {
+    const response = await fetch(jsonNotices);
+    const infos = await response.json();
+    return infos;
 }
-console.log(noticeList)
+const response = await fetchJsonNotices(URL_API)
+
+// Create the list of notices
+let noticeList = new NoticeList(response);
+
+// UPDATE the list of notices
+// Fetch JSON archive each 30s to update 'noticeList'
+setInterval(() => {
+    fetchJsonNotices(URL_API)
+    .then(resp => noticeList.mergeJsonNotices(resp));
+}, 3000);
 
 
+////// Load Pages //////
 // Switch pages
 const horariosPage = document.querySelector("#horarios");
 const avisosPage = document.querySelector("#notices");
 
-let count = 0;
-
 setInterval(() => {
-    console.log('aviso: ' + (new Date()).getSeconds()); //Apenas para debug
+    // console.log('aviso: ' + (new Date()).getSeconds()); //Apenas para debug
 
-    const noticesShown = getNextFiveNotices(count)
-    loadInfos(noticesShown);
-    count = (count + 1)%noticeList.length;
+    loadInfos(noticeList.getNextFiveNotices());
 
     avisosPage.className = "page-notice";
     horariosPage.className += " hidden";
@@ -32,21 +38,11 @@ setInterval(() => {
     // setTimeout(switchPage, noticesShown[0].duration*100);
 }, 1000); // Intervalo de tempo definido para page horários de 40s, no max.
 
-function getNextFiveNotices(count) {
-    let fiveNotices = [];
-    const len = noticeList.length;
-
-    for (let i=count; i< count+5; i++) {
-        fiveNotices.push(noticeList[i%len])
-    }
-    return fiveNotices;
-} 
-
 /*
     Troca da página de avisos para paǵina de horários 
 */
 function switchPage(){
-    console.log('horarios: ' + (new Date()).getSeconds()); //Apenas para debug
+    // console.log('horarios: ' + (new Date()).getSeconds()); //Apenas para debug
 
     horariosPage.className = "page-horarios"
     avisosPage.className += " hidden";
@@ -101,14 +97,14 @@ function loadSidebarNotices(sidebarNotices) {
     // Clean the content inside this 'ul' element
     elNoticesList.innerHTML = ""
 
-    // Append all 'sidebarNotices' to the 'ul' element
+    // Append all 'left-board' notices to the 'ul' element
     sidebarNotices.forEach(notice => {
         const elNotice = document.createElement('li');
         const elNoticeImg = document.createElement('img');
         const elNoticeSpan = document.createElement('span');
         const elNoticeTitle = document.createElement('p');
 
-        console.log(notice.type);
+        // console.log(notice.type);
         if (notice.type == 1) {
             elNoticeImg.setAttribute('src', "./img/avisos/notice-icon.png")
             elNotice.classList.add("message-warning");
@@ -131,7 +127,6 @@ function loadSidebarNotices(sidebarNotices) {
     })
 }
 
-///// HEADER ///////
 // Update header date and time
 function updateCurrentDate() {
     const time = new Date();
