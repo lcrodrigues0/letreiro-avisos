@@ -32,8 +32,8 @@ setInterval(() => {
 
     loadInfos(noticeList.getNextFiveNotices());
 
-    avisosPage.className = "page-notice";
-    horariosPage.className += " hidden";
+    horariosPage.classList.add("hidden");
+    avisosPage.classList.remove("hidden");
 
     // setTimeout(switchPage, noticesShown[0].duration*100);
 }, 1000); // Intervalo de tempo definido para page horários de 40s, no max.
@@ -44,8 +44,8 @@ setInterval(() => {
 function switchPage(){
     // console.log('horarios: ' + (new Date()).getSeconds()); //Apenas para debug
 
-    horariosPage.className = "page-horarios"
-    avisosPage.className += " hidden";
+    horariosPage.classList.remove("hidden");
+    avisosPage.classList.add("hidden");
 }
 
 /*

@@ -15,32 +15,29 @@ export class NoticeList {
         let fiveNotices = [];
     
         for (let i=this.index; i< this.index+5; i++) {
+            // Módulo para se manter no range da lista
             fiveNotices.push(this.list[i%this.length()])
         }
 
+        // Passa para próximo aviso
         this.index += 1;
+        
+        // Módulo para se manter no range da lista
+        this.index %= this.length();
+
         return fiveNotices;
     } 
 
     // Merge the jsonNotices and the this.list using a map
-    // the map don't store the shared notification. ('-')
     mergeJsonNotices(jsonNotices) {
-        let map = new Map();
-
-        // Adding the notice from 'noticeList' to the map
-        this.list.forEach(notice => {
-            map.set(notice.id, notice);
-        })
-
-        // Adding the notice from 'jsonNotices' to the map
+        const noticeList = [];
         for (const info of jsonNotices) {
             const notice = new Notice(info.id, info.type, info.sender, info.title, info.content, info.duration, info.timestamp);
-            map.set(notice.id, notice);
+            noticeList.push(notice);
         }
-
+        
         // Passing these unique notices to the list
-        this.list = [...map.values()];
-
-        console.log(this.list);
+        const map = new Map([...this.list, ...noticeList].map(notice => [notice.id, notice]));
+        this.list = Array.from(map.values());
     }
 }
