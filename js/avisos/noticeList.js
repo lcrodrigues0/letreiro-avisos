@@ -21,7 +21,6 @@ export class NoticeList {
 
         // Passa para próximo aviso
         this.index += 1;
-        
         // Módulo para se manter no range da lista
         this.index %= this.length();
 
