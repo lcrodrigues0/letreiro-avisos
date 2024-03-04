@@ -132,7 +132,7 @@ function loadSidebarNotices(sidebarNotices) {
     })
 }
 
-// LOADING HEADER //
+////// LOADING HEADER //////
 /*
     Update header date and time
 */
