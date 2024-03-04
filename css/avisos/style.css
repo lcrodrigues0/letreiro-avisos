@@ -178,7 +178,7 @@ header .header__content .header__content__time p{
 }
 
 .board .main-board .main-board__content__header .text .teacher h1{
-    font-size: 0.5em;
+    font-size: clamp(0.5em, 0.6em, 1.3em);
     font-weight: 600;
 
     white-space: nowrap;
@@ -198,27 +198,27 @@ header .header__content .header__content__time p{
 }
 
 .board .main-board .main-board__content__header .text .subject h2{
-    font-size: 0.6em;
+    font-size: clamp(0.6em, 0.7em, 1.5em);
 }
 
 .board .main-board .main-board__content .text-notice{
-    margin: 0% 0 0 2%;
-    padding: 5% 0 0 5%;
+    margin: 0 0 0 2%;
+    padding: 0 0 0 5%;
 
     height: 49%;
     width: 80%;
     position: absolute;
-    top: 40%;
+    top: 30%;
     overflow: hidden;
 
     /*  Ajuste do texto */
-    /* display: flex;
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    /* justify-content: center; */
 }
 
 .board .main-board .main-board__content .text-notice p{
-    font-size: 0.5em;
+    font-size: clamp(0.5em, 0.6em, 1.5em);
     line-height: 1.2em;
 }
 
