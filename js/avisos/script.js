@@ -3,7 +3,9 @@ import { NoticeList } from './noticeList.js';
 const URL_API = './avisosDia.json';
 
 ////// FETCHING DATA //////
-// Fetch JSON archive
+/*
+    Fetch JSON archive
+*/
 async function fetchJsonNotices(jsonNotices) {
     const response = await fetch(jsonNotices);
     const infos = await response.json();
@@ -37,11 +39,11 @@ setInterval(() => {
     horariosPage.classList.add("hidden");
     avisosPage.classList.remove("hidden");
 
-    setTimeout(switchPage, fiveNotices[0].duration*100);
-}, 70 * 100); // Intervalo de tempo definido para page horários de 60s, no max.
+    // setTimeout(switchPage, fiveNotices[0].duration*100);
+}, 70 * 100); // Página de horários fica visível por, pelo menos, 60s.
 
 /*
-    Troca da página de avisos para paǵina de horários 
+    Switch from the notice page to the schedule page.
 */
 function switchPage(){
     // console.log('horarios: ' + (new Date() - initialDate)/1000); // Just for time debugging
@@ -51,7 +53,7 @@ function switchPage(){
 }
 
 /*
-    Carrega informações na página de avisos
+    Loads information on the notice page.
 */
 function loadInfos(notices){
     const firstNotice = notices[0];
@@ -62,8 +64,10 @@ function loadInfos(notices){
 }
 
 
-//// DEBUG: Retirar setAtribute('src', ...) # Muito feio
-// Load main notice
+
+/*
+    Loads main notice
+*/
 function loadFirstNotice(firstNotice) {
     let noticeType;
     if (firstNotice.type == 1) {

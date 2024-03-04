@@ -64,7 +64,7 @@ header .header__content .header__content__time p{
     height: 11vmax;
 
     border-radius: 10px;
-    padding: 1%;
+    padding: 3%;
 
     display: flex;
     flex-direction: column;
@@ -82,8 +82,8 @@ header .header__content .header__content__time p{
     max-width: 100%;
 }
 
-
-.board .left-board .message h1{
+/* Modelo antigo */
+/* .board .left-board .message h1{
     font-size: 0.35em;
 
     white-space: nowrap;
@@ -91,11 +91,12 @@ header .header__content .header__content__time p{
     text-overflow: ellipsis;
 
     margin: 3%;
-}
+} */
 
 .board .left-board .message p {
     font-size: 0.3em;
     text-align: center;
+    font-weight: 600;
 
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -124,7 +125,6 @@ header .header__content .header__content__time p{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /* background: purple; */
     position: relative;
 }
 
@@ -132,8 +132,6 @@ header .header__content .header__content__time p{
     max-height: 40%;
     display: flex;
     flex-direction: row;
-
-    /* background-color: blue;  */
 }
 
 .board .main-board .main-board__content__header .image{
@@ -163,7 +161,6 @@ header .header__content .header__content__time p{
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    /* background-color: pink; */
 
     padding: 1%;
     overflow: hidden;
@@ -191,7 +188,6 @@ header .header__content .header__content__time p{
 }
 
 .board .main-board .main-board__content__header .text .subject{
-    /* background: orange; */
     margin: 2% 0 0 7%;
     font-weight: 700;
 
@@ -205,7 +201,6 @@ header .header__content .header__content__time p{
 }
 
 .board .main-board .main-board__content .text-notice{
-    /* background-color: green; */
     margin: 0% 0 0 2%;
     padding: 1% 0 0 2%;
 
