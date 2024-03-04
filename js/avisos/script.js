@@ -22,27 +22,30 @@ setInterval(() => {
 }, 3000);
 
 
+// const initialDate = new Date(); //Apenas para debug de tempo
+
 ////// Load Pages //////
 // Switch pages
 const horariosPage = document.querySelector("#horarios");
 const avisosPage = document.querySelector("#notices");
 
 setInterval(() => {
-    // console.log('aviso: ' + (new Date()).getSeconds()); //Apenas para debug
+    // console.log('aviso: ' + (new Date() - initialDate)/1000); //Apenas para debug
 
-    loadInfos(noticeList.getNextFiveNotices());
+    const fiveNotices = noticeList.getNextFiveNotices();
+    loadInfos(fiveNotices);
 
     horariosPage.classList.add("hidden");
     avisosPage.classList.remove("hidden");
 
-    // setTimeout(switchPage, noticesShown[0].duration*100);
-}, 1000); // Intervalo de tempo definido para page horários de 40s, no max.
+    setTimeout(switchPage, fiveNotices[0].duration*100);
+}, 70 * 100); // Intervalo de tempo definido para page horários de 60s, no max.
 
 /*
     Troca da página de avisos para paǵina de horários 
 */
 function switchPage(){
-    // console.log('horarios: ' + (new Date()).getSeconds()); //Apenas para debug
+    // console.log('horarios: ' + (new Date() - initialDate)/1000); //Apenas para debug
 
     horariosPage.classList.remove("hidden");
     avisosPage.classList.add("hidden");
