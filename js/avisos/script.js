@@ -38,7 +38,7 @@ setInterval(() => {
     horariosPage.classList.add("hidden");
     avisosPage.classList.remove("hidden");
 
-    setTimeout(switchPage, fiveNotices[0].duration*100);
+    // setTimeout(switchPage, fiveNotices[0].duration*100);
 }, 70 * 100); // Schedule page is loaded at least every 60 seconds.
 
 /*
@@ -92,7 +92,9 @@ function loadFirstNotice(firstNotice) {
     document.querySelector('#post-timestamp').textContent = firstNotice.timestamp;
 }
 
-// Load left-board with four notices
+/*  
+    Load left-board with four notices
+*/
 function loadSidebarNotices(sidebarNotices) {
     // Get the 'ul' element on the left-board
     const elNoticesList = document.querySelector('.left-board__content');
@@ -130,7 +132,10 @@ function loadSidebarNotices(sidebarNotices) {
     })
 }
 
-// Update header date and time
+// LOADING HEADER //
+/*
+    Update header date and time
+*/
 function updateCurrentDate() {
     const time = new Date();
 
@@ -152,6 +157,5 @@ function updateCurrentDate() {
 
 // Call the function initially
 updateCurrentDate();
-
 // Update the current date and time every 5 seconds
 setInterval(updateCurrentDate, 5000);
