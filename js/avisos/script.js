@@ -24,9 +24,8 @@ setInterval(() => {
 
 
 // const initialDate = new Date(); // Just for time debugging
-////// LOADING PAGES //////
 
-// Switch pages
+////// LOADING PAGES //////
 const horariosPage = document.querySelector("#horarios");
 const avisosPage = document.querySelector("#notices");
 
@@ -39,8 +38,8 @@ setInterval(() => {
     horariosPage.classList.add("hidden");
     avisosPage.classList.remove("hidden");
 
-    // setTimeout(switchPage, fiveNotices[0].duration*100);
-}, 70 * 100); // Página de horários fica visível por, pelo menos, 60s.
+    setTimeout(switchPage, fiveNotices[0].duration*100);
+}, 70 * 100); // Schedule page is loaded at least every 60 seconds.
 
 /*
     Switch from the notice page to the schedule page.
@@ -62,8 +61,6 @@ function loadInfos(notices){
     const sidebarNotices = notices.slice(1);
     loadSidebarNotices(sidebarNotices);
 }
-
-
 
 /*
     Loads main notice
