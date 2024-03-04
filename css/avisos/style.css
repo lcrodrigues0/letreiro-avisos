@@ -193,6 +193,7 @@ header .header__content .header__content__time p{
 
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     flex-grow: 1;
 }
 
@@ -202,12 +203,18 @@ header .header__content .header__content__time p{
 
 .board .main-board .main-board__content .text-notice{
     margin: 0% 0 0 2%;
-    padding: 1% 0 0 2%;
+    padding: 5% 0 0 5%;
 
     height: 49%;
+    width: 80%;
     position: absolute;
     top: 40%;
     overflow: hidden;
+
+    /*  Ajuste do texto */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 }
 
 .board .main-board .main-board__content .text-notice p{
