@@ -257,10 +257,6 @@ header .header__content .header__content__time p{
 .board .warning {
     background-color: #faee89;
 }
-/* Arrumar */
-/* .warning #main-image {
-    background-color: url("./img/avisos/notice-icon.png");
-} */
 .warning .image {
     background-color: #fce157;
 }
@@ -276,10 +272,6 @@ header .header__content .header__content__time p{
 .board .information {
     background-color: #96ade8;
 }
-/* Arrumar */
-/* .information #main-image {
-    background-color: url('.img/avisos/info');
-} */
 .information .image {
     background-color: #6f8fe1;
 }
@@ -294,10 +286,6 @@ header .header__content .header__content__time p{
 .board .event {
     background-color: #c686f9;
 }
-/* Arrumar */
-/* .event #main-image {
-    background-color: url("./img/avisos/event-icon.png");
-} */
 .event .image {
     background-color: #a66ed2;
 }

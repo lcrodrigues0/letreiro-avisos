@@ -14,23 +14,22 @@ const response = await fetchJsonNotices(URL_API)
 // Create the list of notices
 let noticeList = new NoticeList(response);
 
-// UPDATE the list of notices
-// Fetch JSON archive each 30s to update 'noticeList'
+// Update the list of notices
 setInterval(() => {
     fetchJsonNotices(URL_API)
     .then(resp => noticeList.mergeJsonNotices(resp));
-}, 3000);
+}, 3000); // Fetch JSON archive each 30s to update 'noticeList'
 
 
-// const initialDate = new Date(); //Apenas para debug de tempo
+// const initialDate = new Date(); // Just for time debugging
+////// LOADING PAGES //////
 
-////// Load Pages //////
 // Switch pages
 const horariosPage = document.querySelector("#horarios");
 const avisosPage = document.querySelector("#notices");
 
 setInterval(() => {
-    // console.log('aviso: ' + (new Date() - initialDate)/1000); //Apenas para debug
+    // console.log('aviso: ' + (new Date() - initialDate)/1000); // Just for time debugging
 
     const fiveNotices = noticeList.getNextFiveNotices();
     loadInfos(fiveNotices);
@@ -38,14 +37,14 @@ setInterval(() => {
     horariosPage.classList.add("hidden");
     avisosPage.classList.remove("hidden");
 
-    setTimeout(switchPage, fiveNotices[0].duration*100);
+    // setTimeout(switchPage, fiveNotices[0].duration*100);
 }, 70 * 100); // Intervalo de tempo definido para page horários de 60s, no max.
 
 /*
     Troca da página de avisos para paǵina de horários 
 */
 function switchPage(){
-    // console.log('horarios: ' + (new Date() - initialDate)/1000); //Apenas para debug
+    // console.log('horarios: ' + (new Date() - initialDate)/1000); // Just for time debugging
 
     horariosPage.classList.remove("hidden");
     avisosPage.classList.add("hidden");
