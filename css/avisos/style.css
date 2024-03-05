@@ -203,18 +203,18 @@ header .header__content .header__content__time p{
 
 .board .main-board .main-board__content .text-notice{
     margin: 0 0 0 2%;
-    padding: 0 0 0 5%;
+    padding: 2% 0 0 2%;
 
-    height: 49%;
-    width: 80%;
+    height: 54%;
+    width: 100%;
     position: absolute;
-    top: 30%;
+    top: 40%;
     overflow: hidden;
 
     /*  Ajuste do texto */
     display: flex;
-    align-items: center;
-    /* justify-content: center; */
+    /* align-items: center; */
+    justify-content: center;
 }
 
 .board .main-board .main-board__content .text-notice p{
