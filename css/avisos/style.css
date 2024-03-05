@@ -49,8 +49,7 @@ header .header__content .header__content__time p{
 /* Board */
 .board{
     background-color: #e6ead8;
-    height: 92%;
-    /* flex-grow: 1; */
+    flex-grow: 1;
 
     display: flex;
     padding: 1% 1%;
