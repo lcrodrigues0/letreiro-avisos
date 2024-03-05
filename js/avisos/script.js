@@ -38,7 +38,7 @@ setInterval(() => {
     horariosPage.classList.add("hidden");
     avisosPage.classList.remove("hidden");
 
-    // setTimeout(switchPage, fiveNotices[0].duration*100);
+    setTimeout(switchPage, fiveNotices[0].duration*100);
 }, 70 * 100); // Schedule page is loaded at least every 60 seconds.
 
 /*
