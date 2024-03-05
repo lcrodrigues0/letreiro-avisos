@@ -209,8 +209,8 @@ header .header__content .header__content__time p{
 }
 
 .board .main-board .main-board__content .text-notice{
-    margin: 0 0 0 2%;
-    padding: 2% 0 0 2%;
+    margin: 2% 0 0 2%;
+    padding: 2% 4% 0 2%;
 
     height: 54%;
     width: 100%;

@@ -1,6 +1,7 @@
 import { NoticeList } from './noticeList.js';
 
 const URL_API = './avisosDia.json';
+// const URL_API = 'http://localhost:3333/avisos';
 
 ////// FETCHING DATA //////
 /*

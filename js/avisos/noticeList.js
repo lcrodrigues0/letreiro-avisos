@@ -13,12 +13,19 @@ export class NoticeList {
 
     getNextFiveNotices() {
         let fiveNotices = [];
-    
-        for (let i=this.index; i< this.index+5; i++) {
-            // Módulo para se manter no range da lista
-            fiveNotices.push(this.list[i%this.length()])
-        }
 
+        if (this.list.length < 5){
+            for (let i = this.index; i < this.index + this.length(); i++) {
+                // Módulo para se manter no range da lista
+                fiveNotices.push(this.list[i%this.length()])
+            }
+        } else {
+            for (let i = this.index; i < this.index + 5; i++) {
+                // Módulo para se manter no range da lista
+                fiveNotices.push(this.list[i%this.length()])
+            }
+        }
+        
         // Passa para próximo aviso
         this.index += 1;
         // Módulo para se manter no range da lista
