@@ -52,7 +52,7 @@ header .header__content .header__content__time p{
     flex-grow: 1;
 
     display: flex;
-    padding: 0.7% 1%;
+    padding: 1% 1%;
 }
 
 .board .left-board {
@@ -63,13 +63,12 @@ header .header__content .header__content__time p{
     height: 100%;
 
     border-radius: 10px;
-    padding: 0.3vw;
+    padding: 0.5vw;
 }
 
 .board .left-board .message{
     margin: 2%;
     height: 11vmax;
-
     border-radius: 10px;
     padding: 3%;
 
@@ -119,6 +118,8 @@ header .header__content .header__content__time p{
     max-height: 90vh;
     display: flex;
     align-items: stretch;
+
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
 
     border-radius: 20px;
     margin-left: 1vw;

@@ -96,9 +96,10 @@ function loadFirstNotice(firstNotice) {
     const dayOfWeek = ['SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB', 'DOM']
     const formattedDate =   `${timestamp.getHours().toString().padStart(2, '0')}:` +
                             `${timestamp.getMinutes().toString().padStart(2, '0')} - ` +
-                            `${dayOfWeek[timestamp.getDay()]} ` +
-                            `(${timestamp.getDate().toString().padStart(2, '0')}/`  +
-                            `${timestamp.getMonth().toString().padStart(2, '0')})`;
+                            `${dayOfWeek[timestamp.getDay()]}` +
+                            `${timestamp.getDate().toString().padStart(2, '0')}/`  +
+                            `${timestamp.getMonth().toString().padStart(2, '0')}`;
+                           
 
     document.querySelector('#post-timestamp').textContent = formattedDate;
 }
