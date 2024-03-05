@@ -52,7 +52,7 @@ header .header__content .header__content__time p{
     flex-grow: 1;
 
     display: flex;
-    padding: 1% 1%;
+    padding: 1.2% 1%;
 }
 
 .board .left-board {
