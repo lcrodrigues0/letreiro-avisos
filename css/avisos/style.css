@@ -33,7 +33,7 @@ body {
 /* Header */
 .page-notice header{
     width: 100%;
-    height: 8%;
+    height: 10%;
     background-color: #002876;
     padding: 0 0.2083em;
 
@@ -49,7 +49,8 @@ header .header__content .header__content__time p{
 /* Board */
 .board{
     background-color: #e6ead8;
-    flex-grow: 1;
+    height: 92%;
+    /* flex-grow: 1; */
 
     display: flex;
     padding: 1% 1%;
