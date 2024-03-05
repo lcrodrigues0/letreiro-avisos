@@ -31,9 +31,9 @@ body {
 }
 
 /* Header */
-header {
+.page-notice header{
     width: 100%;
-    height: 8.33%;
+    height: 8%;
     background-color: #002876;
     padding: 0 0.2083em;
 
