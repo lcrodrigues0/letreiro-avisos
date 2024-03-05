@@ -6,6 +6,6 @@ export class Notice {
         this.title = title;
         this.content = content;
         this.duration = duration;
-        this.timestamp = timestamp;
+        this.timestamp = new Date(timestamp);
     }
 }

@@ -90,7 +90,17 @@ function loadFirstNotice(firstNotice) {
     document.querySelector('#sender').textContent = firstNotice.sender;
     document.querySelector('#subject-h2').textContent = firstNotice.title;
     document.querySelector('#text-notice-p').textContent = firstNotice.content;
-    document.querySelector('#post-timestamp').textContent = firstNotice.timestamp;
+
+    // Formating date
+    const timestamp = firstNotice.timestamp;
+    const dayOfWeek = ['SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB', 'DOM']
+    const formattedDate =   `${timestamp.getHours().toString().padStart(2, '0')}:` +
+                            `${timestamp.getMinutes().toString().padStart(2, '0')} - ` +
+                            `${dayOfWeek[timestamp.getDay()]} ` +
+                            `(${timestamp.getDate().toString().padStart(2, '0')}/`  +
+                            `${timestamp.getMonth().toString().padStart(2, '0')})`;
+
+    document.querySelector('#post-timestamp').textContent = formattedDate;
 }
 
 /*  
